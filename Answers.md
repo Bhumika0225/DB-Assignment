@@ -1,0 +1,7 @@
+Q1.**Explain the relationship between the "Product" and "Product_Category" entities from the above diagram.**
+
+Many to one relationship established between “Product” and “Product_Category“ respectively show that there can be so many products that come under one category. The relationship between the "Product" and "Product_Category" entities can be understood as a one-to-many relationship. This means that one product can belong to only one product category, while a product category can have multiple products associated with it. This relationship is typically established through a foreign key constraint, where the "category_id" column in the "Product" table references the "id" column in the "Product_Category" table.
+
+Q2.**How could you ensure that each product in the "Product" table has a valid category assigned to it?**
+
+To ensure that each product in the "Product" table has a valid category assigned to it, you can enforce referential integrity using foreign key constraints. In the "Product" table, the "category_id" column should be defined as a foreign key that references the "id" column in the "Product_Category" table. This ensures that every value in the "category_id" column of the "Product" table must correspond to an existing "id" value in the "Product_Category" table. Additionally, you can make the "category_id" column in the "Product" table NOT NULL to ensure that every product must have a category assigned to it.
